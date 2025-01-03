@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Thai artists </title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" 
+crossorigin>
+<link href="https://fonts.googleapis.com/css2?
+family=Monomaniac+One&family=Victor+Mono:ital,wght@0,100..700;1,100..
+700&display=swap" rel="stylesheet">
+
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- chartjs-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- style.css --> 
+   <link rel="stylesheet" href="css/style.css"/> 
+</head>
+  <body>  
+
+    <!-- header-->
+    <div class="container my-4">
+       <div class="tittle">Thai Drama vote</div>
+    </div>
+    <!-- navigator -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <img src="img/thai.jpg" alt=" Thai logo" width="40px" >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+        aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vote.html"> Vote </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="like.html"> Like </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Dislike.html"> Dislike </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="comment.html"> Comment </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="genre.html">Genre</a>
+            </li>
+          </ul>
+          <div class="form-check form-switch"> 
+            <input class="form-check-input" type="checkbox" id="darkModeToggle" />
+            <label class="form-check-label" for="darkModeToggle" id="themeLabel">Dark Mode</label>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- content -->
+     <div class="container">
+      <div class="row my-4">
+        <div class="col-md-3">
+          <div class="form-floating mb-3">
+            <input type="Departement" class="form-control bg-body-tertiary" id="floatingDepartement" 
+            placeholder="Departement">
+            <label for="floatingDepartement">Agency</label>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-floating">
+            <select class="form-select bg-body-tertiary" id="floatingSelect" aria-label="Floating label select example">
+              <option selected>Select Drama </option>
+              <option value="1"> A Boss and a Babe Season </option>
+              <option value="2"> Love Mechanics </option>
+              <option value="3"> Jack And Joker </option>
+              <option value="4"> Perfect 10 Liners  </option>
+              <option value="5"> Fourever You </option>
+              <option value="6"> The Heart Killers </option>
+              <option value="7"> Thame PO </option>
+              <option value="8"> Enchate </option>
+              <option value="9"> Sotus </option>
+              <option value="10"> Last Twilight </option>
+              <option value="11"> My Love Mix-Up! </option>
+              <option value="12"> Kidnap </option>
+              <option value="13"> The Trainee </option>
+              <option value="14"> Moonlight Chicken </option>
+              <option value="15"> Still To Gether </option>
+              <option value="16"> En Of Love </option>
+              <option value="17"> The Trainee </option>
+              <option value="18"> Dark Blue Kiss </option>
+              <option value="19"> Don't Say No  </option>
+              <option value="20"> Our Sky </option>
+            </select>
+            <label for="floatingSelect">Vote Drama</label>
+          </div>
+        </div>
+        <div class="col-md-3">  
+          <div class="form-floating mb-3">
+          <input type="Project" class="form-control bg-body-tertiary" 
+          id="floatingProject" placeholder="Project">
+          <label for="floatingProject">Drama Release Year</label>
+        </div>
+      </div>
+        <div class="col-md-3"><div class="form-floating mb-3">
+          <input type="Search" class="form-control bg-body-tertiary" 
+          id="floatingSearch" placeholder="Search">
+          <label for="floatingSearch">Search</label>
+          </div>
+        </div>
+      </div>
+     </div>
+
+    <div class="container-fluid bg-body-tertiary">
+      <div class="container">
+        <div class="row py-5">
+            <div class="col-md-2 text-center">
+              <img src="img/love.jpg" alt="aktor" width="200px"/>
+            </div>
+            <div class="col-md-10">
+                  <h3>Thai Drama Vote</h3>
+                  <h6>Inclusive Love Story</h6>
+                  <p>a genre that tells the story of a romantic or emotional relationship between two male characters. 
+                    Although the main focus is usually on the development of their relationship, the genre can include
+                    various elements such as comedy, drama, fantasy, or even thriller. In descriptions of BL dramas, 
+                    themes such as self-acceptance, the search for love, and facing social challenges are often an integral part of the story. </p>
+
+                    <span class="badge text-bg-danger py-2 px-2"><i class="fa-solid 
+                      fa-heart"></i> 100rb Like</span>
+                    <span class="badge text-bg-warning py-2 px-2"> <i class="fa-solid 
+                      fa-heart-crack"></i> 1rb Dislike</span>
+                    <span class="badge text-bg-secondary py-2 px-2"> <i class="fa-regular 
+                      fa-note-sticky"></i> 50 Not Vote</span>
+            </div>
+          </div>
+      </div>
+    </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card shadow bg-body-tertiary border-0">
+              <div class="card-body">
+                <div>
+                  <canvas id="Chart1"></canvas>
+                  <script>
+                    const chart1 = document.getElementById('Chart1');
+                  
+                    new Chart(chart1, {
+                      type: 'bar',
+                      data: {
+                        labels: ['Jack And Joker', 'Last Twilight', 'The Trainee', 'Perfect 10 Liners', 'Still To Gether', 'Fourever You'],
+                        datasets: [{
+                          label: '# like Votes',
+                          data: [3086, 2679, 1895, 2450, 1228, 1000],
+                          borderWidth: 1
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+                      }
+                    });
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow bg-body-tertiary border-0">
+              <div class="card-body">
+              </div>
+              <canvas id="Chart2"></canvas>
+                  <script>
+                    const chart2 = document.getElementById('Chart2');
+                  
+                    new Chart(chart2, {
+                      type: 'line',
+                      data: {
+                        labels: ['Sotus', 'Our Sky', 'Enchante', 'Dont say no', 'Kidnap', 'Dark Blue Kiss'],
+                        datasets: [{
+                          label: '# Dislike Votes',
+                          data: [150, 110, 113, 125, 52, 83],
+                          borderWidth: 1
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+                      }
+                    });
+                  </script>
+            </div>
+          </div>
+          <div class="col-md-4"> <div class="card shadow bg-body-tertiary border-0">
+            <div class="card-body">
+            </div>
+            <canvas id="Chart3"></canvas>
+                  <script>
+                    const chart3 = document.getElementById('Chart3');
+                  
+                    new Chart(chart3, {
+                      type: 'line',
+                      data: {
+                        labels: ['En Of Love', 'Moonlight Chicken', 'My Love Mix-Up', 'A Boss and a Babe', 'Thame PO', 'Enchante'],
+                        datasets: [{
+                          label: '# Not Votes',
+                          data: [1, 0, 3, 2, 2, 3],
+                          borderWidth: 1,
+                          stepped: true, 
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+                      }
+                    });
+                  </script>
+          </div>
+        </div>
+      </div>
+          
+        </div>
+      </div>
+
+      
+
+      <div class="container-fluid blue my-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card my-2 border-0 card_transparen">
+                <div class="card-body">
+                  Best Couple
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card my-2 border-0 card_transparen">
+                <div class="card-body">
+                  Best Actor
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card my-2 border-0 card_transparen">
+          <div class="card-body">
+            Best Actress
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card my-2 border-0 card_transparen">
+          <div class="card-body">
+            Best Drama
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3><i class="fa-solid fa-paperclip"></i> vote description</h3>
+  
+
+      <div class="row my-3">
+        <div class="col-md-4 mb-4">
+          <div class="card bg-body-tertiary border-0 shadow">
+            <div class="card-body justify">
+                <h6 class="my-3"><i class="fa-solid fa-paperclip"></i> Best Couple </h6>
+                <p>A couple of characters in a story, especially in a drama, who have a strong, 
+                  engaging relationship and are liked by the audience. This couple often has extraordinary 
+                  chemistry, both romantically and emotionally, which makes them stand out in the story.
+                   They usually show deep support and understanding for each other, grow together in facing
+                    challenges, and have a dynamic that makes their relationship feel real and heartfelt.</p>
+                  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success" style="width: 80%">80%</div>
+                  </div>
+
+                  <div class="text-end mt-3">
+                    <button type="button" class="btn btn-primary btn-sm"><i class="fa-regular fa-heart"></i></button>
+                    <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-heart-crack"></i></button>
+                  </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-body-tertiary border-0 shadow">
+            <div class="card-body justify">
+                <h6 class="my-3"><i class="fa-solid fa-paperclip"></i> Best Actor</h6>
+                <p> is awarded to a male performer who demonstrates exceptional skill, versatility, 
+                  and depth in his portrayal of a character. This actor brings the role to life, making 
+                  it feel authentic and emotionally resonant. He is able to evoke a wide range of emotions, 
+                  from joy to sorrow, and his performance often leaves a lasting impact on the audience. 
+                  A "Best Actor" can seamlessly transition between different genres and characters, 
+                  consistently delivering strong performances.</p>
+                  <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success" style="width: 50%">50%</div>
+                  </div>
+
+                  <div class="text-end mt-3">
+                    <button type="button" class="btn btn-primary btn-sm"><i class="fa-regular fa-heart"></i></button>
+                    <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-heart-crack"></i></button>
+                  </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-body-tertiary border-0 shadow">
+            <div class="card-body justify">
+                <h6 class="my-3"><i class="fa-solid fa-paperclip"></i> Best Actress</h6>
+                <p> is given to a female performer who excels in her role through remarkable talent, emotional range, 
+                  and ability to connect with the audience. She is able to portray complex characters with nuance 
+                  and depth, bringing them to life in a way that is both compelling and relatable. Whether in dramatic,
+                   comedic, or action roles, a "Best Actress" captivates the audience with her performance and often becomes
+                    the heart of the story.</p>
+                    <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar bg-success" style="width: 100%">100%</div>
+                    </div>
+  
+                    <div class="text-end mt-3">
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa-regular fa-heart"></i></button>
+                      <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-heart-crack"></i></button>
+                    </div>
+  
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-body-tertiary border-0 shadow">
+            <div class="card-body justify">
+                <h6 class="my-3"><i class="fa-solid fa-paperclip"></i> Best Drama</h6>
+                <p> refers to a television series or film that stands out for its exceptional storytelling, acting, direction, 
+                  and overall production quality. It is a drama that captivates the audience with its compelling plot, 
+                  complex characters, and emotional depth. "Best Drama" often tackles important themes and provides
+                   a thought-provoking experience, leaving viewers deeply moved and engaged throughout the series.
+                    This award recognizes the combination of all elements of drama that contribute to an unforgettable 
+                    and impactful viewing experience.</p>
+                    <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar bg-success" style="width: 70%">70%</div>
+                    </div>
+  
+                    <div class="text-end mt-3">
+                      <button type="button" class="btn btn-primary btn-sm"><i class="fa-regular fa-heart"></i></button>
+                      <button type="button" class="btn btn-danger btn-sm"><i class="fa-solid fa-heart-crack"></i></button>
+                    </div>
+  
+
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  </div>
+
+    <!-- footer -->
+      <footer class="footer mt-auto py-3 bg-body-tertiary">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4"> 
+                <div class="tittle_footer"> Best Agancy Thai</div>
+                <p class="justify"> refers to an organization or management company that excels 
+                  in representing and supporting talent, particularly in the entertainment industry. 
+                  This agency is known for its outstanding track record in nurturing and promoting the careers of actors,
+                   musicians, or other performers. It is highly regarded for its professionalism, 
+                   dedication to the well-being of its clients, and its</p>
+            </div>
+              <div class="col-md-2">
+                <div class="row">
+                  <div class="col-1 box_small blue">
+                    GMMTV
+                  </div>
+                  <div class="col-1 box_small pink">
+                    One-31
+                  </div>
+                  <div class="col-1 box_small blue">
+                    Rookie
+                  </div>
+                  <div class="col-1 box_small pink">
+                    Me Mind
+                  </div>
+                  <div class="col-1 box_small blue">
+                    Star
+                  </div>
+                  <div class="col-1 box_small pink">
+                    Beaon 
+                  </div>
+                  <div class="col-1 box_small blue">
+                    Nadao 
+                  </div>
+                  <div class="col-1 box_small pink">
+                    Wabi Sabi
+                  </div>               
+            </div>
+       </div>
+       <div class="col-md-4">
+        <img src="img/GMMTV.png" alt=" Thai logo" width="100px" >
+        <img src="img/3.jpeg" alt=" Thai logo" width="100px" >
+        <img src="img/rokkie.jpeg" alt=" Thai logo" width="100px" >
+        <img src="img/me.jpeg" alt=" Thai logo" width="100px" >
+        <img src="img/star.webp" alt=" Thai logo" width="100px" >
+        <img src="img/beaon.webp" alt=" Thai logo" width="100px" >
+        <img src="img/nadao.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/wabi.png" alt=" Thai logo" width="100px" >
+       </div>
+   </div>           
+        <img src="img/yin2.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/war2.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/bright1.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/win1.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/papi.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/gun.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/mixxiw.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/joong1.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/dunk2.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/singto1.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/krist.jpg" alt=" Thai logo" width="100px" >
+        <img src="img/FB.jpeg" alt=" Thai logo" width="100px" >
+        
+
+            </div>
+          </div>
+      </footer>
+
+
+    <!-- boostrap js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+
+   <!-- Dark mode toggle -->
+<label>
+</label>
+
+
+<!-- Darkmode script -->
+<script>
+  function setTheme(theme) {
+    document.documentElement.setAttribute("data-bs-theme", theme); 
+    localStorage.setItem("theme", theme);
+    document.getElementById("themeLabel").innerText = 
+          theme === "dark" ? "Dark Mode On" : "Dark Mode Off";
+}
+
+document
+    .getElementById("darkModeToggle") 
+    .addEventListener("change", function(event) {
+        if (event.target.checked) {
+            setTheme("dark");
+        } else {
+            setTheme("");
+        }
+    });
+
+   window.onload = function() {
+      let savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+          setTheme(savedTheme);
+          if (savedTheme === "dark") {
+            document.getElementById("darkModeToggle").checked = true;
+          }
+      }
+    };
+    
+     </script>
+  </body>
+</html>
